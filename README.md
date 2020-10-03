@@ -29,4 +29,7 @@ Will use
     > ### So
     > Test 용도로는 완벽하다. 빠르고 편하다
     > 처음에 쓰다가 Migration 해도 좋다.
-- 
+
+
+- .env
+ > For hiding key "only on github"
