@@ -33,3 +33,7 @@ Will use
 
 - .env
  > For hiding key "only on github"
+
+ - onSnapshot
+ - useState > setSomething(prev=> ~~)
+ - Boolean(object) >> isLoggedIn
