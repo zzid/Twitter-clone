@@ -1,4 +1,4 @@
-import { dbService } from 'firebaseAPI';
+import { dbService, storageService } from 'firebaseAPI';
 import React, { useState } from 'react';
 
 const NewTwitt = ({newTwittObject, isOwner}) =>{
@@ -9,7 +9,7 @@ const NewTwitt = ({newTwittObject, isOwner}) =>{
         const ok = window.confirm("Are you sure, you want to delete this twitt?");
         if (ok) {
             await dbService.doc(`twitter-clone/${newTwittObject.id}`).delete();
-            // collection("twitter-clone").
+            await storageService.refFromURL(newTwittObject.attchmentUrl).delete();
         }
     }
 
@@ -51,6 +51,7 @@ const NewTwitt = ({newTwittObject, isOwner}) =>{
                 :
                 (<>
                 <h4>{newTwittObject.text}</h4>
+                {newTwittObject.attchmentUrl && <img src={newTwittObject.attchmentUrl} width="50px" height="50px" alt='img'/>}
                 {
                     isOwner ?
                         <>
