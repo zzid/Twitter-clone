@@ -14,7 +14,8 @@ const Home = ({userObject})=>{
     //             ...document.data(),
     //             id : document.id,
     //         }
-    //         setNewTwittes(prev=>[newTwittesObject, ...prev]);
+    //         setNewTwittes(prev=>[newTwittesObject, ...prev]); // update 
+    //          // set have prev! >> so can change easily. to pass func to setFunc
     //     });
     // }
     useEffect(() => {
