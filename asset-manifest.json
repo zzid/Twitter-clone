@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Twitter-clone/static/css/main.d62f1eca.chunk.css",
+    "main.js": "/Twitter-clone/static/js/main.6fa416d8.chunk.js",
+    "main.js.map": "/Twitter-clone/static/js/main.6fa416d8.chunk.js.map",
+    "runtime-main.js": "/Twitter-clone/static/js/runtime-main.92ffe739.js",
+    "runtime-main.js.map": "/Twitter-clone/static/js/runtime-main.92ffe739.js.map",
+    "static/js/2.0b646a14.chunk.js": "/Twitter-clone/static/js/2.0b646a14.chunk.js",
+    "static/js/2.0b646a14.chunk.js.map": "/Twitter-clone/static/js/2.0b646a14.chunk.js.map",
+    "index.html": "/Twitter-clone/index.html",
+    "precache-manifest.9a59a1a015b6957d148a154149c87eeb.js": "/Twitter-clone/precache-manifest.9a59a1a015b6957d148a154149c87eeb.js",
+    "service-worker.js": "/Twitter-clone/service-worker.js",
+    "static/css/main.d62f1eca.chunk.css.map": "/Twitter-clone/static/css/main.d62f1eca.chunk.css.map",
+    "static/js/2.0b646a14.chunk.js.LICENSE.txt": "/Twitter-clone/static/js/2.0b646a14.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.92ffe739.js",
+    "static/js/2.0b646a14.chunk.js",
+    "static/css/main.d62f1eca.chunk.css",
+    "static/js/main.6fa416d8.chunk.js"
+  ]
+}
