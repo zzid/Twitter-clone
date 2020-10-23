@@ -37,3 +37,14 @@ Will use
  - onSnapshot
  - useState > setSomething(prev=> ~~)
  - Boolean(object) >> isLoggedIn
+
+
+ <pre>
+@fortawesome/fontawesome-free
+@fortawesome/fontawesome-free
+@fortawesome/fontawesome-svg-core
+@fortawesome/free-brands-svg-icons
+@fortawesome/free-regular-svg-icons
+@fortawesome/free-solid-svg-icons
+@fortawesome/react-fontawesome
+ </pre>

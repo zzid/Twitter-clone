@@ -17,17 +17,17 @@ const Home = ({userObject})=>{
     }, [])
 
     return (
-        <div>
-            <TwittFactory userObject={userObject} />
-            <div>
-                {newTwittes.map(newTwitt=>(
-                    <NewTwitt
-                        key={newTwitt.id} 
-                        newTwittObject={newTwitt}
-                        isOwner={newTwitt.creatorId === userObject.uid}
-                    />
-                ))}
-            </div>
+      <div className="container">
+        <TwittFactory userObject={userObject} />
+          <div style={{ marginTop: 30 }}>
+              {newTwittes.map(newTwitt=>(
+                  <NewTwitt
+                      key={newTwitt.id} 
+                      newTwittObject={newTwitt}
+                      isOwner={newTwitt.creatorId === userObject.uid}
+                  />
+              ))}
+          </div>
         </div>      
     );
 }

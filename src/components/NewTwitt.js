@@ -1,5 +1,7 @@
 import { dbService, storageService } from 'firebaseAPI';
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 
 const NewTwitt = ({newTwittObject, isOwner}) =>{
     const [ editing, setEditing ] = useState(false);
@@ -31,39 +33,46 @@ const NewTwitt = ({newTwittObject, isOwner}) =>{
         setEditedNewTwitt(value);
     }
     
-    return (
-        <div>
-            {
-                editing ? (
-                <>
-                <form onSubmit={onSubmit}>
-                    <input
-                        type="text"
-                        placeholder="Edit Your twitt"
-                        value={editedNewTwitt}
-                        onChange={onChange}
-                        required
-                    />
-                    <input type='submit' value='update twitt' />
-                </form>
-                <button onClick={toggleEditing}>Cancel</button>
-                </>)
-                :
-                (<>
-                <h4>{newTwittObject.text}</h4>
-                {newTwittObject.attchmentUrl && <img src={newTwittObject.attchmentUrl} width="50px" height="50px" alt='img'/>}
-                {
-                    isOwner ?
-                        <>
-                            <button onClick={onDeleteClick}>Delete</button>
-                            <button onClick={toggleEditing}>Edit</button>
-                        </>
-                        : <></>
-                }
-                </>)
-            }
-        </div>
-    )
+  return (
+    <div className="nweet">
+      {
+        editing ? (
+        <>
+        <form onSubmit={onSubmit} className="container nweetEdit">
+          <input
+              type="text"
+              placeholder="Edit Your twitt"
+              value={editedNewTwitt}
+              onChange={onChange}
+              autoFocus
+              className="formInput"
+              required
+          />
+          <input type='submit' value='Update twitt' className="formBtn"/>
+        </form>
+        <span onClick={toggleEditing} className="formBtn cancelBtn">
+          Cancel
+        </span>
+        </>)
+        :
+        (<>
+        <h4>{newTwittObject.text}</h4>
+        {newTwittObject.attchmentUrl && <img src={newTwittObject.attchmentUrl} />}
+        {
+            isOwner && (
+              <div class="nweet__actions">
+                <span onClick={onDeleteClick}>
+                  <FontAwesomeIcon icon={faTrash} />
+                </span>
+                <span onClick={toggleEditing}>
+                  <FontAwesomeIcon icon={faPencilAlt} />
+                </span>
+              </div>
+            )}
+        </>
+      )}
+    </div>
+  )
 }
 
 export default NewTwitt;    

@@ -1,6 +1,6 @@
-import React, { useEffect,useState } from "react";
+import React, { useState } from "react";
 import { useHistory } from 'react-router-dom';
-import { authService, dbService } from "../firebaseAPI";
+import { authService } from "../firebaseAPI";
 
 export default ({ refreshUser, userObject })=> {
     const history = useHistory();
@@ -41,17 +41,28 @@ export default ({ refreshUser, userObject })=> {
     }
 
     return(
-        <>
-          <form onSubmit={onSubmit}>
-            <input
-              type='text'
-              onChange={onChange}
-              placeholder='Display name'
-              value={newDisplayName}
-            />
-            <input type='submit' value='Update Profile'/>
-          </form>
-          <button onClick={onLogOutClick}>Log out</button>
-        </>
+      <div className="container">
+        <form onSubmit={onSubmit} className="profileForm">
+          <input
+            type='text'
+            onChange={onChange}
+            placeholder='Display name'
+            value={newDisplayName}
+            autoFocus
+            className="formInput"
+          />
+          <input
+            type="submit"
+            value="Update Profile"
+            className="formBtn"
+            style={{
+              marginTop: 10,
+            }}
+          />
+        </form>
+        <span className="formBtn cancelBtn logOut" onClick={onLogOutClick}>
+          Log Out
+        </span>
+    </div>
     )
 }
